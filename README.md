@@ -1,24 +1,22 @@
-# ask
+# Верстка тестового макета
+```
+На работу ушло около 10 часов
+```
+```
+При верстке использовалась методология БЭМ
+```
 
-## Project setup
+## Установка проекта
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Запуск локального сервера для разработки
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Сборка на продакшн
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
