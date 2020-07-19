@@ -1,32 +1,72 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="wrapper">
+      <TheHeader/>
+      <TheNavbar/>
+      <TheSlider/>
+      <TheCatalog/>
+      <TheFooter class="wrapper__footer"/>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+  import TheHeader from './components/TheHeader';
+  import TheNavbar from './components/TheNavbar';
+  import TheSlider from './components/TheSlider';
+  import TheCatalog from './components/TheCatalog';
+  import TheFooter from './components/TheFooter';
+
+  export default {
+    components: {
+      TheHeader,
+      TheNavbar,
+      TheSlider,
+      TheCatalog,
+      TheFooter
+    }
+  };
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @import "~reset-css/reset.css";
+  @import "~animate.css/animate.min.css";
+  @import "https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 
-#nav {
-  padding: 30px;
-}
+  * {
+    box-sizing: border-box;
+    outline: none;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  button {
+    border: none;
+    cursor: pointer;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  a {
+    color: inherit;
+    transition-duration: 500ms;
+  }
+
+  body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .container {
+    width: 980px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .wrapper__footer {
+    flex-grow: 1;
+  }
 </style>
